@@ -22,12 +22,18 @@ def remove_non_strings(arr)
   end
 end
 
-def count_elements
-
+def count_elements(array)
+    
+    array.uniq.each {|i| count = 0
+        array.each {|i2| if i2 == i then count += 1 end}
+        i[:count] = count}
 end
+    
 
-def merge_data
-
+def merge_data(keys, data)
+  merged = []
+  keys.each {|i| data.first.map {|k,v| if i.values[0] == k then merged << i.merge(v) end}}
+  merged
 end
 
 def find_cool(nums)
