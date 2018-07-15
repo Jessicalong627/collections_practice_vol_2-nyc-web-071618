@@ -10,12 +10,16 @@ def contain_a(arr)
   end
 end
 
-def first_wa
-
+def first_wa(arr)
+    arr.detect do |string|
+    string[0,2] == "wa"
+  end
 end
-
-def remove_non_strings
-
+    
+def remove_non_strings(arr)
+    arr.delete_if do |string| 
+    string.is_a?(String) == false
+  end
 end
 
 def count_elements
